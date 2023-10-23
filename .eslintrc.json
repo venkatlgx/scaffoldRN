@@ -1,0 +1,55 @@
+{
+    "env": {
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "airbnb/hooks",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-native"
+    ],
+    "rules": {
+     
+        "no-unused-vars": "error",
+        "camelcase": ["error", { "properties": "always" }],
+        "react/jsx-pascal-case": "error",
+        "no-warning-comments": "error",
+        "max-lines": ["error", { "max": 700 }],
+       
+        "no-restricted-imports": [
+            "error",
+            {
+                "paths": [
+                    {
+                        "name": "path",
+                        "message": "Import image files using a constant in a separate file and then use it in components."
+                    }
+                ]
+            }
+        ],
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
+        "no-magic-numbers": ["error", { "ignore": [0, 1, -1] }],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "no-use-before-define": ["error", { "variables": false }],
+        "react/prop-types": ["error", {"ignore": ["navigation", "navigation.navigate"]}],
+        "react/function-component-definition": [
+            "error",
+            {
+                "namedComponents": "arrow-function",
+                "unnamedComponents": "arrow-function"
+            }
+        ]
+    }
+}
